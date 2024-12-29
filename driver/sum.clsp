@@ -1,0 +1,11 @@
+(mod (numbers)
+    ; Define a helper function to sum up a list recursively
+    (defun sum_list (nums)
+        (if nums
+            (+ (f nums) (sum_list (r nums)))  ; Add the first number to the sum of the rest
+            0                                 ; Base case: empty list has a sum of 0
+        )
+    )
+
+    (sum_list numbers)  ; Call the helper function with the input list
+)
