@@ -30,7 +30,6 @@ mnemonic=Ths is your testnet11 wallet mnemonic that should not be shared
 ### npm packages
 There are a number of npm packages that help with the clvm in javascript. This document will use clvm. 
 
-- clvm_tools
 ```bash
 npm install clvm-lib
 ```
@@ -44,11 +43,20 @@ Deploying a contract to the network involves creating driver code in given langu
 
 [deploy-contract.js](deploy-contract.js) is a simple sample driver code that publishes a chialisp program that accepts an argument and multiplies it by itself.  
 
+```
+npm run deploy
+```
+
 **note:** this contract does not create_coin back to an address hash and will burn whatever value that is locked up in it, which is why only a small amount is locked up in the contract (0.000001 TXCH). 
 
 ## Interacting with Smart Contracts
 Interacting with a smart contract involves a program that provides a solution to the puzzle (program) that you have developed - i.e the parameters that the puzzle requires. This code is called the driver code. Each puzzle will have its own driver code and can be wrote in JS/Python or Rust or using cdv.
 
+[interact.js](interact.js) is a simple driver that interacts  will your unpent coin and will pass in a parameter; thus burning the coin value. 
+
+```
+npm run interact
+```
 
 ## Terms & Abbreviations
 | **Term**       | **Definition**                                                                 |
