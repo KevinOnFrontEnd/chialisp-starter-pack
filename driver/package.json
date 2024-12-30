@@ -4,19 +4,21 @@
   "description": "Sample Chialisp driver",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "node deploy-contract.js",
+    "interact": "node interact.js"
   },
   "keywords": [
     "chialisp",
     "chia",
     "driver",
     "contract",
-    "starterpack"
+    "chialisp starter pack"
   ],
   "author": "KevinOnFrontEnd",
   "license": "ISC",
   "dependencies": {
-    "chia-utils": "^1.0.10",
-    "clvm_tools": "^0.9.5"
+    "clvm_tools": "^0.9.5",
+    "clvm-lib": "^1.0.1",
+    "dotenv": "^16.4.7"
   }
 }
